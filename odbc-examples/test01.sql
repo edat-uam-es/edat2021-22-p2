@@ -16,21 +16,12 @@ SET client_min_messages = warning;
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
-SET search_path = public, pg_catalog;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
 
 --
 -- Name: a; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
@@ -42,7 +33,6 @@ CREATE TABLE a (
 );
 
 
-ALTER TABLE public.a OWNER TO postgres;
 
 --
 -- Data for Name: a; Type: TABLE DATA; Schema: public; Owner: postgres
@@ -66,12 +56,6 @@ ALTER TABLE ONLY a
 --
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
 
 --
 -- PostgreSQL database dump complete
