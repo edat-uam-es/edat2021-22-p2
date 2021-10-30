@@ -1,10 +1,13 @@
 #!/usr/bin/expect -f
 #export TERM=linux
-#set KEY_DOWN \x1b\[B
 # +
 set KEY_UP \x2B
+# uncomment \x20 or \x1b\[B lines if you want to use "-" or key_down
+# if it does not work use autoexpect to find the right keys
 # -
-set KEY_DOWN \x2D
+# set KEY_DOWN \x2D
+# down arrow
+set KEY_DOWN \x1b\[B
 # >
 set KEY_RIGHT \x3E
 # <
